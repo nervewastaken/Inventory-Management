@@ -1,0 +1,9 @@
+.maindiv{
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    margin-left:50px;
+    
+    background-color: greenyellow;
+    
+}
