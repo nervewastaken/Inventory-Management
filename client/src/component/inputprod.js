@@ -4,7 +4,7 @@ const InputProd = () => {
 
     const [prodid , setprodid] = useState("");
     const [prodname , setprodname] = useState("");
-    const [price, setprice] = useState(0);
+    const [price, setprice] = useState("");
 
     const onsubmitform = async e => {
         e.preventDefault();
@@ -30,18 +30,21 @@ const InputProd = () => {
             className="prodid" 
             value={prodid}
             onChange={e => setprodid(e.target.value)}
+            placeholder="Product ID"
             />
         <input 
             type="text" 
             className="prodname" 
             value={prodname}
             onChange={e => setprodname(e.target.value)}
+            placeholder="Product Name"
         />
         <input
             type="number" 
             className="prodprice" 
             value={price}
             onChange={e => setprice(e.target.value)}
+            placeholder="Price"
         />
         <button className="btn-success" type="submit">Add Product</button>
         </form>
