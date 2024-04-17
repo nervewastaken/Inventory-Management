@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import './App.css';
-
 import InputProd from "./component/inputprod";
+
 
 function App() {
   const [prod, setProd] = useState([]);
@@ -64,9 +64,12 @@ function App() {
     }
   };
   
+// for hemal and sirfan 
 
   return (
     <Fragment>
+
+
       <InputProd />
       <div className="">
         <table>
@@ -132,7 +135,7 @@ function App() {
     </div>
 
     {/* table2 for form 2 */}
-    
+
       <div className="inventory">
       <table>
           <thead>
@@ -159,8 +162,12 @@ function App() {
           </tbody>
         </table>
       </div>
+
+      
     </Fragment>
   );
 }
+
+//for hemal and sirfan
 
 export default App;

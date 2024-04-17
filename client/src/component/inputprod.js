@@ -21,6 +21,9 @@ const InputProd = () => {
             console.log(err);
         }
     }
+
+    // for hemal and sirfan 
+
     return(
         <Fragment>
         <h1>Products</h1>
@@ -52,5 +55,6 @@ const InputProd = () => {
     );
 }
 
+//for hemal and sirfan
 
 export default InputProd;
