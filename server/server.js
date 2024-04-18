@@ -7,6 +7,7 @@ app.use(express.json());
 app.use(cors());
 
 
+
 //localhost:3000
 //localhost:4000
 
@@ -15,6 +16,7 @@ app.post("/addprod", (req, res) => {
     const prodname = req.body["prodname"];
     const price = req.body["price"];
 
+   
     console.log("Product ID" + prodid);
     console.log("Product Name" + prodname);
     console.log("Product Price" + price);

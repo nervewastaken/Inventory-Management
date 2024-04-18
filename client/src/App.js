@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import './App.css';
 import InputProd from "./component/inputprod";
+import {BrowserRouter as Router ,Link, Route, Routes, Switch} from 'react-router-dom'; 
+import about from "./about";
 
 
 function App() {
@@ -47,12 +49,20 @@ function App() {
         comments,
         supervisor
       };
-  
+      
+      if (!prodid || !invsize || !comments || !supervisor) {
+        window.alert("Please fill in all details.");
+      } // Display an alert if any field is empty
+      
       const response = await fetch(`http://localhost:4000/addinventory/${prodid}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       });
+
+      if(prodid<0||Number.isInteger(prodid)){
+        window.alert("bad input");
+      }
       
       
       if (response.ok) {
@@ -67,33 +77,42 @@ function App() {
 // for hemal and sirfan 
 
   return (
+    <Router>
     <Fragment>
+    
+    
+      
+    
 
+
+
+      {/* <div class="navbar">
+      </div> */}
 
       <InputProd />
       <div className="">
-        <table>
-          <thead>
-            <tr>
-              <th>Product ID</th>
-              <th>Product Name</th>
-              <th>Product Price</th>
-              <th>Action</th> {/* Added a column for the delete button */}
-              
-            </tr>
-          </thead>
-          <tbody>
-            {prod.map(product => (
-              <tr key={product.prodid}>
-                <td>{product.prodid}</td>
-                <td>{product.prodname}</td>
-                <td>{product.prodprice}</td>
-                <td><button className="btn-delete" onClick={() => deleteProd(product.prodid)}>Delete</button></td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {prod.map(product => (
+        <tr key={product.prodid}>
+          <td>{product.prodid}</td>
+          <td>{product.prodname}</td>
+          <td>{product.prodprice}</td>
+          <td><button className="btn-delete" onClick={() => deleteProd(product.prodid)}>Delete</button></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
 
       <div className="line"></div>
 
@@ -162,9 +181,10 @@ function App() {
           </tbody>
         </table>
       </div>
-
+      </Fragment>
+      </Router>
+    
       
-    </Fragment>
   );
 }
 

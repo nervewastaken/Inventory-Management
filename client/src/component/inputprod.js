@@ -6,16 +6,33 @@ const InputProd = () => {
     const [prodname , setprodname] = useState("");
     const [price, setprice] = useState("");
 
+
+
     const onsubmitform = async e => {
         e.preventDefault();
         try{
             const body = {prodid,prodname,price};
             // eslint-disable-next-line no-unused-vars
-            const response = await fetch("http://localhost:4000/addprod", {
+            
+            if (!prodid || !prodname || !price) {
+                window.alert("Please fill in all details.");
+              }
+            if(prodid<0 || Number.isInteger(prodid)  ){
+                window.alert("Product ID can't be negative or float");
+              }
+
+            if(price<0 || Number.isInteger(price)){
+                window.alert("Product Price can't be negative or float")
+                
+            }
+            else{
+                const response = await fetch("http://localhost:4000/addprod", {
                 method: "POST",
                 headers: {"Content-Type":"application/json"},
                 body : JSON.stringify(body)
             });
+            }
+
             window.location = "/";
         }catch(err){
             console.log(err);
