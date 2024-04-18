@@ -11,6 +11,8 @@ app.use(cors());
 //localhost:3000
 //localhost:4000
 
+//add inventory 1st one
+
 app.post("/addprod", (req, res) => {
     const prodid = req.body["prodid"];
     const prodname = req.body["prodname"];
