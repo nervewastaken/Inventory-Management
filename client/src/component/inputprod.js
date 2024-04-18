@@ -38,7 +38,7 @@ const InputProd = () => {
 
   return (
     <Fragment>
-      <h1>Products</h1>
+      <div className="space"></div>
       <form onSubmit={onsubmitform}>
         <input
           type="number"
