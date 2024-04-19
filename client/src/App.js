@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./App.css";
 import InputProd from "./component/inputprod";
+import Charts from "./component/charts";
 
 function App() {
   const [prod, setProd] = useState([]);
@@ -57,7 +58,7 @@ function App() {
         return; // Stop execution if any field is empty
       }
 
-      if (prodid < 0 || !Number.isInteger(+prodid)) {
+      if (prodid < 0 || Number.isInteger(prodid)) {
         window.alert("Invalid input for Product ID.");
         return; // Stop execution if product ID is invalid
       }
@@ -73,6 +74,7 @@ function App() {
 
       if (response.ok) {
         console.log("Inventory details added successfully");
+        console.log(response);
         window.location.reload();
       }
     } catch (err) {
@@ -162,6 +164,7 @@ function App() {
                 <th>Inventory</th>
                 <th>Comments</th>
                 <th>Supervisor</th>
+                <th>Check-In Date</th>
               </tr>
             </thead>
             <tbody>
@@ -173,12 +176,14 @@ function App() {
                   <td>{product.invsize}</td>
                   <td>{product.comments}</td>
                   <td>{product.supervisor}</td>
+                  <td>{product.logindate}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
       </div>
+      <Charts />
 
       {/* ABOUT US SECTION */}
 
