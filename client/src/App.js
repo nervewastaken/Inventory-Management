@@ -123,7 +123,6 @@ function App() {
               value={prodid}
               onChange={(e) => setprodid(e.target.value)}
               placeholder="Product ID"
-              
             />
 
             <input
