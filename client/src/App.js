@@ -164,7 +164,7 @@ function App() {
                 <th>Inventory</th>
                 <th>Comments</th>
                 <th>Supervisor</th>
-                <th>Check-In Date</th>
+                <th>Last Updated</th>
               </tr>
             </thead>
             <tbody>
