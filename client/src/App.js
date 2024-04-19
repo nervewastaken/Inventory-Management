@@ -123,6 +123,7 @@ function App() {
               value={prodid}
               onChange={(e) => setprodid(e.target.value)}
               placeholder="Product ID"
+              
             />
 
             <input
@@ -185,6 +186,8 @@ function App() {
       <button className="toggle-button" onClick={toggleContent}>
         About Us
       </button>
+
+      {/* about us page */}
       <div
         className="container"
         style={{ display: showContent ? "block" : "none" }}
