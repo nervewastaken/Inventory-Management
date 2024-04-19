@@ -38,8 +38,23 @@ const InputProd = () => {
 
   return (
     <Fragment>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          padding: "10px",
+          backgroundColor: "#f2f2f2",
+        }}
+      >
+        {
+          <img
+            src="https://icons.veryicon.com/png/o/miscellaneous/collect-and-receive-cash/inventory-4.png"
+            style={{ height: "70px", marginRight: "10px" }}
+          />
+        }
+      </div>
       <div className="space"></div>
-      <form onSubmit={onsubmitform}>
+      <form onSubmit={onsubmitform} style={{ marginLeft: "20px" }}>
         <input
           type="number"
           className="prodid"
