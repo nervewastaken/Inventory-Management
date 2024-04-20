@@ -2,11 +2,26 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import AboutUs from "./routes/AboutUs";
+import Products from "./routes/Products";
+import Inventory from "./routes/Inventory";
+import Analytics from "./routes/Analytics";
+import HomePage from "./routes/HomePage";
+
+const router = createBrowserRouter([
+  { path: "/", element: <App /> },
+  { path: "/AboutUs", element: <AboutUs /> },
+  { path: "/Products", element: <Products /> },
+  { path: "/Inventory", element: <Inventory /> },
+  { path: "/Analytics", element: <Analytics /> },
+  { path: "/HomePage", element: <HomePage /> },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 );
 

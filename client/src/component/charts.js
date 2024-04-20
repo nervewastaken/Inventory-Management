@@ -35,12 +35,17 @@ const Charts = () => {
   return (
     <div>
       <h2>Charts</h2>
-      <BarChart width={600} height={300} data={formattedData}>
+      <BarChart width={1000} height={550} data={formattedData}>
         <XAxis dataKey="prodid">
-          <Label value="Product ID" offset={0} position="insideBottom" />
+          <Label value="Product ID" offset={-5} position="insideBottom" />
         </XAxis>
         <YAxis>
-          <Label value="Inventory Size" angle={-90} position="insideLeft" />
+          <Label
+            value="Inventory Size"
+            angle={-90}
+            position="insideLeft"
+            style={{ marginRight: "20px" }}
+          />
         </YAxis>
         <Tooltip />
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />

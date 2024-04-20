@@ -113,29 +113,6 @@ app.post("/addinventory/:prodid", async (req, res) => {
 });
 
 
-//add comment
 
-// app.post("/addprod/:prodid", async(req,res) => {
-//     try{
-//         const {prodid} = req.params;
-//         const comments = req.body["comments"];
-//         const addcomment = await pool.query(`UPDATE proddeets SET comments = ${comments} where prodid = ${prodid}`);
-
-//     }catch(err){
-//         console.log(err);
-//     }
-// })
-
-// //add supervisor
-
-// app.post("/addprod/:prodid", async(req,res) => {
-//     try{
-//         const {prodid} = req.params;
-//         const supervisor = req.body["supervisor"];
-//         const addsupervisor = await pool.query(``);
-//     }catch(err){
-//         console.log(err);
-//     }
-// })
 
 app.listen(4000, () => console.log("Server on localhost:4000"))
