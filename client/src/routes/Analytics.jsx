@@ -4,7 +4,7 @@ import Charts from "../component/charts";
 
 const Analytics = () => {
   return (
-    <div>
+    <div className="aboutus">
       <Navbar />
       Analytics
       <Charts />

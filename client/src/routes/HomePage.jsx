@@ -3,7 +3,7 @@ import Navbar from "../component/Navbar";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="aboutus">
       <Navbar />
       HomePage
     </div>

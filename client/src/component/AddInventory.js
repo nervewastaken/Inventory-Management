@@ -70,7 +70,7 @@ const AddInventory = () => {
           onChange={(e) => setSupervisor(e.target.value)}
           placeholder="Supervisor"
         />
-        <button type="submit">Add Inventory Details</button>
+        <button type="submit">Update Inventory Details</button>
       </form>
     </div>
   );

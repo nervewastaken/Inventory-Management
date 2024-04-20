@@ -17,7 +17,7 @@ const Products = () => {
   };
 
   return (
-    <div>
+    <div className="aboutus">
       <Navbar />
       <InputProd fetchProducts={fetchProducts} />
       <ShowProd />

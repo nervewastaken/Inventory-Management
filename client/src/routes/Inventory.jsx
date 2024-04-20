@@ -5,7 +5,7 @@ import Navbar from "../component/Navbar";
 
 const Inventory = () => {
   return (
-    <div>
+    <div className="aboutus">
       <Navbar />
       Inventory
       <AddInventory />

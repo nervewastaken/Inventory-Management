@@ -112,7 +112,25 @@ app.post("/addinventory/:prodid", async (req, res) => {
     }
 });
 
-
+app.post("/login", async (req, res) => {
+    try {
+        const { username, password } = req.body;
+        
+        // Check if the username exists and the password is correct
+        const user = await pool.query('SELECT * FROM users WHERE username = $1 AND password = $2', [username, password]);
+        
+        if (user.rows.length === 1) {
+            // If username and password match, send success response
+            res.status(200).json({ message: "Login successful" });
+        } else {
+            // If username or password is incorrect, send error response
+            res.status(401).json({ message: "Invalid username or password" });
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
+});
 
 
 app.listen(4000, () => console.log("Server on localhost:4000"))
