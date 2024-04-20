@@ -34,7 +34,7 @@ const Charts = () => {
 
   return (
     <div>
-      <h2>Charts</h2>
+      <h2 style={{ marginLeft: "20px" }}>Inventory Data</h2>
       <BarChart width={1000} height={550} data={formattedData}>
         <XAxis dataKey="prodid">
           <Label value="Product ID" offset={-5} position="insideBottom" />

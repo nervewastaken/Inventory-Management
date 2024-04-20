@@ -6,7 +6,6 @@ const Analytics = () => {
   return (
     <div className="aboutus">
       <Navbar />
-      Analytics
       <Charts />
     </div>
   );
