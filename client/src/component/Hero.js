@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="mainhero">
       <div className="hero">
         <div className="Welcome">
-          <h1>Welcome!</h1>
+          <h1 style={{ color: "white" }}>Welcome!</h1>
           <Link to={"/Products"}>
             <button style={{ minWidth: "250px" }} class="button-64">
               <span class="text">Add a product</span>
