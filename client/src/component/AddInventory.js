@@ -1,5 +1,6 @@
 // AddInventory.js
 import React, { useState } from "react";
+import "./AddInventory.css";
 
 const AddInventory = () => {
   const [prodid, setProdid] = useState("");

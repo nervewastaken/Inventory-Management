@@ -1,5 +1,6 @@
 // InputProd.js
 import React, { Fragment, useState } from "react";
+import "./inputprod.css";
 
 const InputProd = ({ fetchProducts }) => {
   const [prodid, setProdid] = useState("");
