@@ -1,7 +1,5 @@
-
-
 .space {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 form {
@@ -22,20 +20,5 @@ input {
 
 input:focus {
   outline: none;
-  border-color: #007bff; 
-}
-
-button {
-  padding: 12px 20px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #218838; 
+  border-color: #007bff;
 }
