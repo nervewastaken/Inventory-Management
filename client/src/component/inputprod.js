@@ -72,6 +72,7 @@ const InputProd = ({ fetchProducts }) => {
         <button className="btn-success" type="submit">
           Add Product
         </button>
+        <br></br>
       </form>
     </Fragment>
   );

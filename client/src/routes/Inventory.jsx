@@ -7,7 +7,7 @@ const Inventory = () => {
   return (
     <div className="aboutus">
       <Navbar />
-      Inventory
+
       <AddInventory />
       <ShowInv />
     </div>
