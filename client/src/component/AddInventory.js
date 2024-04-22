@@ -72,6 +72,7 @@ const AddInventory = () => {
           placeholder="Supervisor"
         />
         <button type="submit">Update Inventory Details</button>
+        <br></br>
       </form>
     </div>
   );
