@@ -7,7 +7,6 @@ app.use(express.json());
 app.use(cors());
 
 
-
 //localhost:3000
 //localhost:4000
 
@@ -62,18 +61,7 @@ app.get("/addprod/:prodid" , async(req,res) => {
     }
 });
 
-//update a product
 
-// app.put("/addprod/:prodid", async(req,res) => {
-//     try{
-
-//         const {prodid} = req.params;
-//         const {}
-//     } catch(err){
-//         console.log(err);
-
-//     }
-// })
 
 //delete a prod
 

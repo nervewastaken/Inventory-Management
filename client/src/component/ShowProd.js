@@ -23,7 +23,6 @@ const ShowProd = () => {
           method: "DELETE",
         },
       );
-      // Assuming you want to update the product list after deletion
       fetchProducts();
     } catch (err) {
       console.log(err);

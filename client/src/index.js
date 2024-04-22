@@ -7,7 +7,7 @@ import AboutUs from "./routes/AboutUs";
 import Products from "./routes/Products";
 import Inventory from "./routes/Inventory";
 import Analytics from "./routes/Analytics";
-import HomePage from "./routes/HomePage";
+import ChatbotEmbed from "./component/chatbot";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   { path: "/Products", element: <Products /> },
   { path: "/Inventory", element: <Inventory /> },
   { path: "/Analytics", element: <Analytics /> },
-  { path: "/HomePage", element: <HomePage /> },
+  { path: "/chatbot", element: <ChatbotEmbed /> },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

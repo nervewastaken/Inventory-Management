@@ -49,6 +49,6 @@ tr:hover {
 
 .scroll-container {
   padding-top: 25px;
-  max-height: 400px; /* Set the desired height */
-  overflow-y: auto; /* Add vertical scroll */
+  max-height: 400px;
+  overflow-y: auto;
 }

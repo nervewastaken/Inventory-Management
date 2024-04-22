@@ -2,6 +2,7 @@ import React from "react";
 import AddInventory from "../component/AddInventory";
 import ShowInv from "../component/ShowInv";
 import Navbar from "../component/Navbar";
+import ChatbotEmbed from "../component/chatbot";
 
 const Inventory = () => {
   return (
@@ -10,6 +11,7 @@ const Inventory = () => {
 
       <AddInventory />
       <ShowInv />
+      <ChatbotEmbed />
     </div>
   );
 };

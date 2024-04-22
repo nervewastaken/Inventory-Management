@@ -30,7 +30,7 @@ const Charts = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, []); // Empty dependency array to run only on component mount
+  }, []); 
 
   return (
     <div>

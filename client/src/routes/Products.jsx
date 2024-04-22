@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Navbar from "../component/Navbar";
 import InputProd from "../component/inputprod";
 import ShowProd from "../component/ShowProd";
+import ChatbotEmbed from "../component/chatbot";
 
 const Products = () => {
   const [prod, setProd] = useState([]);
@@ -21,6 +22,7 @@ const Products = () => {
       <Navbar />
       <InputProd fetchProducts={fetchProducts} />
       <ShowProd />
+      <ChatbotEmbed />
     </div>
   );
 };

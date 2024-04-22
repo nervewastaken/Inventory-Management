@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../component/Navbar";
+import ChatbotEmbed from "../component/chatbot";
 
 const AboutUs = () => {
   return (
@@ -67,6 +68,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      <ChatbotEmbed />
     </div>
   );
 };
