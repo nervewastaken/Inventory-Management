@@ -22,3 +22,9 @@ input:focus {
   outline: none;
   border-color: #007bff;
 }
+
+.scroll-container {
+  padding-top: 50px;
+  max-height: 750px; /* Set the desired height */
+  overflow-y: auto; /* Add vertical scroll */
+}

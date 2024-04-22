@@ -19,7 +19,7 @@ const ShowInv = () => {
   }, []);
 
   return (
-    <div>
+    <div className="scroll-container2">
       <table>
         <thead>
           <tr>
