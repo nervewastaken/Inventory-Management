@@ -27,7 +27,7 @@ const Hero = () => {
           <br></br>
           <Link to={"/AboutUs"}>
             <button style={{ minWidth: "250px" }} class="button-64">
-              <span class="text">About Us!</span>
+              <span class="text">Contact Us!</span>
             </button>
           </Link>
         </div>

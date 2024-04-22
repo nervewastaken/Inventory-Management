@@ -20,7 +20,7 @@ const Navbar = () => {
         <button className="btn">Analytics</button>
       </Link>
       <Link style={{ marginRight: "10px" }} to={"/AboutUs"}>
-        <button className="btn">About Us</button>
+        <button className="btn">Contact Us</button>
       </Link>
     </div>
   );
