@@ -19,7 +19,7 @@ const ShowInv = () => {
   }, []);
 
   return (
-    <div className="scroll-container2">
+    <div className="scroll-container">
       <table>
         <thead>
           <tr>
@@ -41,7 +41,7 @@ const ShowInv = () => {
               <td>{product.invsize}</td>
               <td>{product.comments}</td>
               <td>{product.supervisor}</td>
-              <td>{product.logindate}</td>
+              <td>{product.dateup}</td>
             </tr>
           ))}
         </tbody>

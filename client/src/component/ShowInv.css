@@ -47,8 +47,8 @@ tr:hover {
   background-color: #c82333;
 }
 
-.scroll-container2 {
-  padding-top: 50px;
-  max-height: 750px; /* Set the desired height */
+.scroll-container {
+  padding-top: 25px;
+  max-height: 400px; /* Set the desired height */
   overflow-y: auto; /* Add vertical scroll */
 }

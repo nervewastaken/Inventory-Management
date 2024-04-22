@@ -92,45 +92,24 @@ app.delete("/addprod/:prodid", async(req,res) => {
 
 //add inventory
 
+
+
 app.post("/addinventory/:prodid", async (req, res) => {
     try {
         const { prodid } = req.params;
         const { invsize, comments, supervisor } = req.body;
         
-        // Update inventory size
-        await pool.query('UPDATE proddeets SET invsize = $1 WHERE prodid = $2', [invsize, prodid]);
-        
-        // Update comments
-        await pool.query('UPDATE proddeets SET comments = $1 WHERE prodid = $2', [comments, prodid]);
-        
-        // Update supervisor
-        await pool.query('UPDATE proddeets SET supervisor = $1 WHERE prodid = $2', [supervisor, prodid]);
+        // Update inventory size, comments, supervisor, and "update" column with current date
+        await pool.query('UPDATE proddeets SET invsize = $1, comments = $2, supervisor = $3, dateup = CURRENT_TIMESTAMP WHERE prodid = $4', [invsize, comments, supervisor, prodid]);
 
         res.status(200).send("Inventory details added successfully");
+        console.log(res);
     } catch (err) {
         console.log(err);
+        res.status(500).send("Internal server error");
     }
 });
 
-app.post("/login", async (req, res) => {
-    try {
-        const { username, password } = req.body;
-        
-        // Check if the username exists and the password is correct
-        const user = await pool.query('SELECT * FROM users WHERE username = $1 AND password = $2', [username, password]);
-        
-        if (user.rows.length === 1) {
-            // If username and password match, send success response
-            res.status(200).json({ message: "Login successful" });
-        } else {
-            // If username or password is incorrect, send error response
-            res.status(401).json({ message: "Invalid username or password" });
-        }
-    } catch (err) {
-        console.log(err);
-        res.status(500).json({ message: "Internal Server Error" });
-    }
-});
 
 
 app.listen(4000, () => console.log("Server on localhost:4000"))
