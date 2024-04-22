@@ -47,7 +47,7 @@ const AboutUs = () => {
                   textDecoration: "none",
                 }}
               >
-                Inventory-Management
+                Click here
               </a>
             </p>
 
