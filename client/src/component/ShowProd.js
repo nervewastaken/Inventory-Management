@@ -34,7 +34,7 @@ const ShowProd = () => {
   }, []);
 
   return (
-    <div>
+    <div className="scroll-container">
       <table>
         <thead>
           <tr>

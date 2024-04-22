@@ -15,6 +15,35 @@ const AboutUs = () => {
           <br></br>
           Muhammed Sirfan -22BKT0147
         </div>
+        <div>
+          <p>
+            <span>GitHub Link:</span>
+            <a
+              href="https://github.com/nervewastaken/Inventory-Management"
+              style={{
+                paddingRight: "10px",
+                color: "#0366d6",
+                textDecoration: "none",
+              }}
+            >
+              Inventory-Management
+            </a>
+          </p>
+
+          <p>
+            Krish's GitHub:
+            <a
+              href="https://github.com/nervewastaken/"
+              style={{
+                paddingRight: "10px",
+                color: "#0366d6",
+                textDecoration: "none",
+              }}
+            >
+              nervewastaken
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );
