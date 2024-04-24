@@ -16,7 +16,6 @@ const ShowProd = () => {
 
   const deleteProd = async (prodid) => {
     try {
-      // eslint-disable-next-line no-unused-vars
       const deleteprod = await fetch(
         `http://localhost:4000/addprod/${prodid}`,
         {

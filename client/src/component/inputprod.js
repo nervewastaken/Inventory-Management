@@ -36,7 +36,7 @@ const InputProd = ({ fetchProducts }) => {
       if (response.ok) {
         console.log("Product added successfully");
 
-        fetchProducts(); // Update product list locally
+        fetchProducts();
         setProdid("");
         setProdname("");
         setPrice("");

@@ -19,12 +19,12 @@ const AddInventory = () => {
 
       if (!prodid || !invsize || !comments || !supervisor) {
         window.alert("Please fill in all details.");
-        return; // Stop execution if any field is empty
+        return;
       }
 
       if (prodid < 0 || !Number.isInteger(+prodid)) {
         window.alert("Invalid input for Product ID.");
-        return; // Stop execution if product ID is invalid
+        return;
       }
 
       const response = await fetch(
