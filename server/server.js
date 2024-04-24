@@ -81,22 +81,28 @@ app.delete("/addprod/:prodid", async(req,res) => {
 //add inventory
 
 
-
 app.post("/addinventory/:prodid", async (req, res) => {
     try {
         const { prodid } = req.params;
         const { invsize, comments, supervisor } = req.body;
         
+        // Check if prodid exists in the database
+        const existingProduct = await pool.query('SELECT * FROM proddeets WHERE prodid = $1', [prodid]);
+        if (existingProduct.rows.length === 0) {
+            return res.status(404).send("Product ID not found");
+        }
+
         // Update inventory size, comments, supervisor, and "update" column with current date
         await pool.query('UPDATE proddeets SET invsize = $1, comments = $2, supervisor = $3, dateup = CURRENT_TIMESTAMP WHERE prodid = $4', [invsize, comments, supervisor, prodid]);
 
         res.status(200).send("Inventory details added successfully");
-        console.log(res);
+        console.log("Inventory details added successfully");
     } catch (err) {
-        console.log(err);
+        console.error(err);
         res.status(500).send("Internal server error");
     }
 });
+
 
 
 

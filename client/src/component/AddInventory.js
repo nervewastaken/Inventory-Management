@@ -1,4 +1,3 @@
-// AddInventory.js
 import React, { useState } from "react";
 import "./AddInventory.css";
 
@@ -35,6 +34,11 @@ const AddInventory = () => {
           body: JSON.stringify(body),
         },
       );
+
+      if (response.status === 404) {
+        window.alert("Product ID not found.");
+        return;
+      }
 
       if (response.ok) {
         console.log("Inventory details added successfully");
