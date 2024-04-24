@@ -64,6 +64,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+
       <ChatbotEmbed />
     </div>
   );

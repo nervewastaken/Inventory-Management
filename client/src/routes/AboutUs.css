@@ -69,3 +69,9 @@
   height: 20px;
   margin-right: 0.5rem;
 }
+
+.chat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
