@@ -18,7 +18,9 @@ const AboutUs = () => {
               <p>22BCE2382</p>
               <p>
                 <img src={mailLogo} alt="Mail Logo" className="mail-logo" />
-                krishverma2004@gmail.com
+                <a href="mailto:krishverma2004@gmail.com">
+                  krishverma2004@gmail.com
+                </a>
               </p>
             </div>
             <div className="contact-item">
@@ -26,7 +28,7 @@ const AboutUs = () => {
               <p>22BDS0432</p>
               <p>
                 <img src={mailLogo} alt="Mail Logo" className="mail-logo" />
-                hemal4sri@gmail.com
+                <a href="mailto:hemal4sri@gmail.com">hemal4sri@gmail.com</a>
               </p>
             </div>
             <div className="contact-item">
@@ -34,7 +36,9 @@ const AboutUs = () => {
               <p>22BKT0147</p>
               <p>
                 <img src={mailLogo} alt="Mail Logo" className="mail-logo" />
-                sirfan.salam@gmail.com
+                <a href="mailto:sirfan.salam@gmail.com">
+                  sirfan.salam@gmail.com
+                </a>
               </p>
             </div>
           </div>
