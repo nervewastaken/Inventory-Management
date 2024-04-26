@@ -11,7 +11,6 @@ const Inventory = () => {
 
       <AddInventory />
       <ShowInv />
-      <ChatbotEmbed />
     </div>
   );
 };

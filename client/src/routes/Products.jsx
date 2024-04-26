@@ -22,7 +22,6 @@ const Products = () => {
       <Navbar />
       <InputProd fetchProducts={fetchProducts} />
       <ShowProd />
-      <ChatbotEmbed />
     </div>
   );
 };

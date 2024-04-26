@@ -8,7 +8,6 @@ const Analytics = () => {
     <div className="aboutus">
       <Navbar />
       <Charts />
-      <ChatbotEmbed />
     </div>
   );
 };

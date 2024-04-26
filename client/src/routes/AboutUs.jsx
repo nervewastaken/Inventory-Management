@@ -14,31 +14,11 @@ const AboutUs = () => {
           <h2>Contact Us</h2>
           <div className="contact-card">
             <div className="contact-item">
-              <h3>Krish Verma</h3>
-              <p>22BCE2382</p>
+              <h3>Amar Madrewar</h3>
+              <p>22BCE0827</p>
               <p>
                 <img src={mailLogo} alt="Mail Logo" className="mail-logo" />
-                <a href="mailto:krishverma2004@gmail.com">
-                  krishverma2004@gmail.com
-                </a>
-              </p>
-            </div>
-            <div className="contact-item">
-              <h3>V Hemal Sri</h3>
-              <p>22BDS0432</p>
-              <p>
-                <img src={mailLogo} alt="Mail Logo" className="mail-logo" />
-                <a href="mailto:hemal4sri@gmail.com">hemal4sri@gmail.com</a>
-              </p>
-            </div>
-            <div className="contact-item">
-              <h3>Muhammed Sirfan</h3>
-              <p>22BKT0147</p>
-              <p>
-                <img src={mailLogo} alt="Mail Logo" className="mail-logo" />
-                <a href="mailto:sirfan.salam@gmail.com">
-                  sirfan.salam@gmail.com
-                </a>
+                <a href="mailto:amar.madrewar2022@vitstudent.ac.in">email</a>
               </p>
             </div>
           </div>
@@ -52,20 +32,9 @@ const AboutUs = () => {
               <img src={githubLogo} alt="GitHub Logo" className="github-logo" />
               GitHub Link
             </a>
-            <a
-              href="https://github.com/nervewastaken/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-button"
-            >
-              <img src={githubLogo} alt="GitHub Logo" className="github-logo" />
-              Krish's GitHub
-            </a>
           </div>
         </div>
       </div>
-
-      <ChatbotEmbed />
     </div>
   );
 };
