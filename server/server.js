@@ -89,7 +89,7 @@ app.post("/addinventory/:prodid", async (req, res) => {
         // Check if prodid exists in the database
         const existingProduct = await pool.query('SELECT * FROM proddeets WHERE prodid = $1', [prodid]);
         if (existingProduct.rows.length === 0) {
-            return res.status(404).send("Product ID not found");
+            return res.status(404).send("Error 404 : Product ID not found");
         }
 
         // Update inventory size, comments, supervisor, and "update" column with current date

@@ -36,7 +36,7 @@ const AddInventory = () => {
       );
 
       if (response.status === 404) {
-        window.alert("Product ID not found.");
+        window.alert("Error 404 : Product ID not found.");
         return;
       }
 
