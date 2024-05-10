@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../component/Navbar";
 import ChatbotEmbed from "../component/chatbot";
 import "./AboutUs.css";

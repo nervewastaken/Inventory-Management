@@ -5,6 +5,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+const port = process.env.PORT || 4000;
 
 
 //localhost:3000
@@ -106,4 +107,4 @@ app.post("/addinventory/:prodid", async (req, res) => {
 
 
 
-app.listen(4000, () => console.log("Server on localhost:4000"))
+app.listen(port, () => console.log("Server on localhost:4000"))
