@@ -1,0 +1,10 @@
+-- Create proddeets Table
+CREATE TABLE proddeets (
+    prodid SERIAL PRIMARY KEY,
+    prodname VARCHAR(255) NOT NULL,
+    prodprice DECIMAL(10, 2) NOT NULL,
+    invsize INT,
+    comments TEXT,
+    supervisor VARCHAR(255),
+    dateup TIMESTAMP
+);
