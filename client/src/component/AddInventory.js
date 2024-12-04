@@ -27,7 +27,7 @@ const AddInventory = () => {
       }
 
       const response = await fetch(
-        `http://localhost:4000/addinventory/${prodid}`,
+        `http://localhost:3000/addinventory/${prodid}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
