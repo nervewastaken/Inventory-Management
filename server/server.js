@@ -104,4 +104,22 @@ app.post("/addinventory/:prodid", async (req, res) => {
 
 
 
-app.listen(port, () => console.log(`Server on localhost:${port}`))
+const server = app.listen(port, () => console.log(`Server on localhost:${port}`));
+
+// Handle SIGTERM for clean shutdown
+process.on('SIGTERM', () => {
+  console.log('SIGTERM received. Shutting down gracefully...');
+  server.close(() => {
+    console.log('HTTP server closed.');
+    process.exit(0); // Exit with success code
+  });
+});
+
+// Handle SIGINT (optional, for local Docker stops)
+process.on('SIGINT', () => {
+  console.log('SIGINT received. Shutting down...');
+  server.close(() => {
+    console.log('HTTP server closed.');
+    process.exit(0); // Exit with success code
+  });
+});
