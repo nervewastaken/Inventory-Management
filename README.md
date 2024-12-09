@@ -10,6 +10,8 @@
 ### Deployments
 
 Server is deployed on Heroku
+
 Client is deployed on Vercel 
+
 Database is hosted on Amazon RDS (Relational Database Service) - PostgreSQL
 
